@@ -5,6 +5,12 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Cash Register</title>
+    <style>
+      .hide,
+      .hide-err {
+        display: none;
+      }
+    </style>
   </head>
   <body>
     <div class="container" style="display: flex; flex-direction: column">
@@ -13,40 +19,44 @@
       <label for="bill-amount">Bill Amount</label>
       <input type="number" id="bill-amount" />
 
-      <button>Next</button>
+      <button id="next-btn">Next</button>
+      <p class="hide-err">Value should be greater than 0</p>
 
-      <label for="cash-given">Cash Given</label>
-      <input type="number" id="cash-given" />
+      <div class="hide">
+        <label for="cash-given">Cash Given</label><br />
+        <input type="number" id="cash-given" /><br />
 
-      <button id="check-btn">Check</button>
-      <p id="err-msg"></p>
+        <button id="check-btn">Check</button><br />
+        <p id="err-msg"></p>
+        <br />
 
-      <table class="change-table">
-        <caption>
-          Return Change
-        </caption>
-        <tr>
-          <th>No of Notes</th>
-          <td class="no-of-notes"></td>
-          <td class="no-of-notes"></td>
-          <td class="no-of-notes"></td>
-          <td class="no-of-notes"></td>
-          <td class="no-of-notes"></td>
-          <td class="no-of-notes"></td>
-          <td class="no-of-notes"></td>
-        </tr>
+        <table class="change-table">
+          <caption>
+            Return Change
+          </caption>
+          <tr>
+            <th>No of Notes</th>
+            <td class="no-of-notes"></td>
+            <td class="no-of-notes"></td>
+            <td class="no-of-notes"></td>
+            <td class="no-of-notes"></td>
+            <td class="no-of-notes"></td>
+            <td class="no-of-notes"></td>
+            <td class="no-of-notes"></td>
+          </tr>
 
-        <tr>
-          <th>Note</th>
-          <td>2000</td>
-          <td>500</td>
-          <td>100</td>
-          <td>20</td>
-          <td>10</td>
-          <td>5</td>
-          <td>1</td>
-        </tr>
-      </table>
+          <tr>
+            <th>Note</th>
+            <td>2000</td>
+            <td>500</td>
+            <td>100</td>
+            <td>20</td>
+            <td>10</td>
+            <td>5</td>
+            <td>1</td>
+          </tr>
+        </table>
+      </div>
     </div>
 
     <script src="index.js"></script>

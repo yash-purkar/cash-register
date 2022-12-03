@@ -3,9 +3,9 @@ const cashGiven = document.querySelector("#cash-given");
 const checkBtn = document.querySelector("#check-btn");
 const errMsg = document.querySelector("#err-msg");
 const noOfNotes = document.querySelectorAll(".no-of-notes");
+const nextBtn = document.querySelector("#next-btn");
 const hide = document.querySelector(".hide")
-// console.log(hide);
-
+const hideErr = document.querySelector(".hide-err");
 
 
 const availableNotes = [2000, 500, 100, 20, 10, 5, 1]
@@ -47,3 +47,15 @@ function showMsg(msg) {
 function hideErrMsg() {
   errMsg.style.display = "none";
 }
+
+
+// 1st WE did it display none inside css
+nextBtn.addEventListener("click", function checkNumber() {
+  if (Number(billAmount.value) > 0) {
+    hide.style.display = "block";
+    hideErr.style.display = "none";
+  } else {
+    hide.style.display = "none";
+    hideErr.style.display = "block";
+  }
+})
