@@ -5,44 +5,43 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Cash Register</title>
-    <style>
-      .hide,
-      .hide-err {
-        display: none;
-      }
+    <link rel="stylesheet" href="index.css" />
     </style>
   </head>
   <body>
     <div class="container" style="display: flex; flex-direction: column">
       <h1 class="heading">Cash Register Manager</h1>
 
-      <label for="bill-amount">Bill Amount</label>
-      <input type="number" id="bill-amount" />
+      
+      <input type="number" id="bill-amount" placeholder="Enter Bill Amount"/>
 
       <button id="next-btn">Next</button>
       <p class="hide-err">Value should be greater than 0</p>
 
       <div class="hide">
-        <label for="cash-given">Cash Given</label><br />
-        <input type="number" id="cash-given" /><br />
+
+       <br />
+       <div class="cash_given">
+        <input type="number" id="cash-given" placeholder="Cash Given" /><br />
 
         <button id="check-btn">Check</button><br />
         <p id="err-msg"></p>
+      </div>
         <br />
 
         <table class="change-table">
-          <caption>
+          <h3>
             Return Change
-          </caption>
-          <tr>
+          </h3>
+          <tr id="firstTr">
             <th>No of Notes</th>
-            <td class="no-of-notes"></td>
-            <td class="no-of-notes"></td>
-            <td class="no-of-notes"></td>
-            <td class="no-of-notes"></td>
-            <td class="no-of-notes"></td>
-            <td class="no-of-notes"></td>
-            <td class="no-of-notes"></td>
+            <td class="no-of-notes">200</td>
+            <td class="no-of-notes">25</td>
+            <td class="no-of-notes">25</td>
+            <td class="no-of-notes">25</td>
+            <td class="no-of-notes">25</td>
+            <td class="no-of-notes">25</td>
+            <td class="no-of-notes">25</td>
           </tr>
 
           <tr>
