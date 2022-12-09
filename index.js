@@ -6,7 +6,8 @@ const noOfNotes = document.querySelectorAll(".no-of-notes");
 const nextBtn = document.querySelector("#next-btn");
 const hide = document.querySelector(".hide")
 const hideErr = document.querySelector(".hide-err");
-
+const firstTr = document.querySelector("#firstTr")
+console.log(firstTr);
 
 const availableNotes = [2000, 500, 100, 20, 10, 5, 1]
 
@@ -21,11 +22,14 @@ checkBtn.addEventListener("click", function validateBillAndCashAmount() {
 
     } else {
 
-      showMsg("Give At least bill amount, we are not taking more than bill amount.")
+      showMsg("Give At least bill amount, we are not taking more than bill amount.");
+      for (let i = 0; i < availableNotes.length; i++) {
+        noOfNotes[i].innerText = ""
+      }
     }
 
   } else {
-    showMsg("The value should be greater than 0")
+    showMsg("The value should be greater than 0");
   };
 });
 
