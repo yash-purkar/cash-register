@@ -19,23 +19,26 @@ checkBtn.addEventListener("click", function validateBillAndCashAmount() {
   hideErrMsg();
   if (Number(billAmount.value) > 0) {
 
-    if (Number(cashGiven.value) >= Number(billAmount.value)) {
+    if (Number(cashGiven.value) > Number(billAmount.value)) {
       const amountToBeReturned = Number(cashGiven.value) - Number(billAmount.value);
       calculateChange(amountToBeReturned);
       hideTable.style.display = "inline-block";
       returnMsg.style.display = "inline-block"
-
+    }
+    else if (Number(cashGiven.value) === Number(billAmount.value)) {
+      hideTable.style.display = "none";
+      errMsg.style.display = "block";
+      errMsg.innerHTML = "<h3>No Need To Return😐</h3>";
     }
 
     else {
-
-      showMsg("Pay the full amount of bill😐");
+      showMsg("Pay the full amount of bill😠");
       hideTable.style.display = "none";
       returnMsg.style.display = "none"
-
     }
 
-  } else {
+  }
+  else {
     showMsg("The value should be greater than 0");
   };
 });
