@@ -96,11 +96,13 @@ input {
 table {
   border: 1px solid white;
   margin: auto;
+  width: fit-content;
 }
 
 h3 {
   text-align: center;
   font-size: 25px;
+  margin-left: 38%;
 }
 th {
   border-right: 1px solid white;
@@ -112,4 +114,8 @@ td {
 }
 .no-of-notes {
   border-bottom: 1px solid white;
+}
+
+#err-msg {
+  font-size: 22px;
 }

@@ -23,9 +23,11 @@ checkBtn.addEventListener("click", function validateBillAndCashAmount() {
       const amountToBeReturned = Number(cashGiven.value) - Number(billAmount.value);
       calculateChange(amountToBeReturned);
       hideTable.style.display = "flex";
-      returnMsg.style.display = "flex"
+      returnMsg.style.display = "inline-block"
 
-    } else {
+    }
+
+    else {
 
       showMsg("Pay the full amount of bill😐");
       hideTable.style.display = "none";
