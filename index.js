@@ -22,7 +22,7 @@ checkBtn.addEventListener("click", function validateBillAndCashAmount() {
     if (Number(cashGiven.value) >= Number(billAmount.value)) {
       const amountToBeReturned = Number(cashGiven.value) - Number(billAmount.value);
       calculateChange(amountToBeReturned);
-      hideTable.style.display = "flex";
+      hideTable.style.display = "inline-block";
       returnMsg.style.display = "inline-block"
 
     }
@@ -46,6 +46,9 @@ function calculateChange(amountToBeReturned) {
 
     amountToBeReturned = amountToBeReturned % availableNotes[i];
 
+    if (numberOfNotes > 0) {
+      noOfNotes[i].classList.add("notesColor")
+    }
     noOfNotes[i].innerText = numberOfNotes;
   }
 }

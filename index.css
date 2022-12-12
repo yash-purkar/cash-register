@@ -1,5 +1,6 @@
 * {
   color: white;
+  font-size: 19px;
 }
 body {
   background-color: #2e0058;
@@ -19,6 +20,7 @@ body {
   color: red;
   padding: 10px;
   margin: auto;
+  font-size: 22px;
 }
 
 .heading {
@@ -26,6 +28,7 @@ body {
   letter-spacing: 1.5px;
   text-align: center;
   margin-bottom: 50px;
+  font-size: 35px;
 }
 
 input {
@@ -34,7 +37,7 @@ input {
   background-color: #2e0058;
   color: #fff;
   margin-right: 6px;
-  width: 30%;
+  width: 40%;
   margin: auto;
   padding: 15px;
   border-bottom: 1px solid rgb(249, 249, 249);
@@ -67,7 +70,9 @@ input {
 
 /* cash 227 */
 .cash_given {
-  margin-left: 227px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
 }
 
 .cash_given #check-btn {
@@ -80,7 +85,7 @@ input {
   border: 1px solid #fff;
   background-color: #2e0058;
   margin-bottom: 50px;
-  margin-left: 31px;
+  align-self: center;
 }
 .cash_given #check-btn:hover {
   font-weight: bold;
@@ -95,7 +100,8 @@ input {
 
 table {
   border: 1px solid white;
-  margin: auto;
+
+  margin-left: 60px;
   width: fit-content;
 }
 
@@ -118,4 +124,9 @@ td {
 
 #err-msg {
   font-size: 22px;
+}
+
+.notesColor {
+  color: #00ff00;
+  font-weight: bold;
 }
