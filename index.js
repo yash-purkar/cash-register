@@ -8,8 +8,12 @@ const hide = document.querySelector(".hide")
 const hideErr = document.querySelector(".hide-err");
 const firstTr = document.querySelector("#firstTr")
 console.log(firstTr);
+const hideTable = document.querySelector("table");
+const returnMsg = document.querySelector("#returnMsg");
 
-const availableNotes = [2000, 500, 100, 20, 10, 5, 1]
+const availableNotes = [2000, 500, 100, 20, 10, 5, 1];
+hideTable.style.display = "none";
+returnMsg.style.display = "none";
 
 checkBtn.addEventListener("click", function validateBillAndCashAmount() {
   hideErrMsg();
@@ -18,14 +22,15 @@ checkBtn.addEventListener("click", function validateBillAndCashAmount() {
     if (Number(cashGiven.value) >= Number(billAmount.value)) {
       const amountToBeReturned = Number(cashGiven.value) - Number(billAmount.value);
       calculateChange(amountToBeReturned);
-
+      hideTable.style.display = "flex";
+      returnMsg.style.display = "flex"
 
     } else {
 
-      showMsg("Give At least bill amount, we are not taking more than bill amount.");
-      for (let i = 0; i < availableNotes.length; i++) {
-        noOfNotes[i].innerText = ""
-      }
+      showMsg("Pay the full amount of bill😐");
+      hideTable.style.display = "none";
+      returnMsg.style.display = "none"
+
     }
 
   } else {
